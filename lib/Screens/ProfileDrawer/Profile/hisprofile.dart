@@ -97,9 +97,8 @@ class _HisProfileState extends State<HisProfile> {
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
                                         fit: BoxFit.cover,
-                                        image: NetworkImage(
-                                            "https://firebasestorage.googleapis.com/v0/b/nodemcu-ac498.appspot.com/o/profilePhotos%2Fimage_picker7520950041675576623jpg?alt=media&token=0c07914f-e302-4708-9804-c709c9bcb9d8"))),
-                              ),
+                                      image: data["avatar"]==null? AssetImage("assets/Icons/account2.png"):NetworkImage(data["avatar"])
+                              ),),),
                               SizedBox(
                                 height: 30,
                               ),
